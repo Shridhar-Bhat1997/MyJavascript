@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Change Html Style </title>
+<style>
+  .bluebox{
+      background-color: #3A5795;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+   .yellowbox{
+   background-color: rgb(222,224,85);
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+    .greenbox{
+	background-color:green;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+	.great{
+	   background-color:red;
+	   font-size:200%;
+	   }
+  
+</style>
+</head>
+
+<body>
+<div class="bluebox" id="facebook">
+ <p> Facebook is <span class="great"> great.<span> </p>
+</div>
+<div class="yellowbox" id="microsoft">
+ <p> Microsoft </p>
+</div>
+<div class="greenbox">
+ <p> Wipro </p>
+ </div>
+ 
+<!------Javascript----------- -->
+
+<button id="button1"> Change Facebook style </button>
+<button id="button2"> Change Microsoft style </button>
+
+<script>
+  document.getElementById("button1").onclick=function()
+  {
+    document.getElementById("facebook").style.width= "300px"; <!-- style the width -->
+	document.getElementById("facebook").style.backgroundColor= "red"; <!-- style the background -->
+	}
+	
+	document.getElementById("button2").onclick=function()
+	{
+	document.getElementById("microsoft").style.fontSize= "3em";
+	}
+	
+</script>
+</body>
+</html>
