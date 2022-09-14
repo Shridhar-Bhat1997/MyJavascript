@@ -1,2 +1,0 @@
-# MyJava
-Javascript Tasks
