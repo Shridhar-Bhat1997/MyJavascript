@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Variables & Datatypes </title>
+<style>
+  .bluebox{
+      background-color: #3A5795;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+   .yellowbox{
+   background-color: rgb(222,224,85);
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+    .greenbox{
+	background-color:green;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+	.great{
+	   background-color:red;
+	   font-size:200%;
+	   }
+  
+</style>
+</head>
+
+<body>
+<div class="bluebox" id="facebook">
+ <p> Facebook is <span class="great"> great.<span> </p>
+</div>
+<div class="yellowbox" id="microsoft">
+ <p> Microsoft </p>
+</div>
+<div class="greenbox">
+ <p> Wipro </p>
+ </div>
+ 
+<!------Javascript----------- -->
+
+<button id="button1"> Change Facebook style </button>
+<button id="button2"> Change Microsoft style </button>
+
+<script>
+ 
+ var z;
+   window.console.log("the value of z is " +  z);
+   
+ var x=3;
+  window.console.log(x);
+  window.console.log("the type of x is:" + typeof(x));
+  
+ var y;
+ y=10;
+   window.console.log(y);
+   
+ s=x+y;
+   window.console.log("the value of s is " +  s);
+   
+ p=x + " " + y;
+  window.console.log("the value of p is " +  p);
+  window.console.log("the type of p is:" + typeof(p));
+  
+ var greeting="Welcome";
+ var firstname="John";
+ var message=greeting + " " + firstname;
+ window.console.log("the value of message is:" + message);
+ window.console.log("the type of message is:" + typeof(message));
+ 
+ var check = (x == 3)
+  window.console.log("the value is:" + check);
+  window.console.log("the type of check is:" + typeof(check));
+  
+  var myArray=[1,2,3]
+   window.console.log(myArray);
+   window.console.log(typeof(myArray));
+ 
+  
+ 
+ 
+   
+	
+</script>
+</body>
+</html>
