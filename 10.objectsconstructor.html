@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+    <title> Object Constructors </title>
+ </head>
+ 
+ <body> 
+   <p> Javascript </p>
+   
+<script>
+<!-- this is constructor -->
+function phone(make,model,warranty,color)
+{
+ this.make = make;
+ this.model = model;
+ this.warranty = warranty;
+ this.color = color;
+ this.extendWarranty = function(x)   <!-- to add function -->
+ {
+   this.warranty= this.warranty + x;
+ }
+ }
+ 
+ 
+ <!-- create a new object by invoking this function -->
+ 
+ var myPhone = new phone("Apple","Iphone 6",6,"white"); <!-- constructor -->
+ 
+ window.console.log(myPhone);
+ myPhone.extendWarranty(12);  <!-- to invoke the function -->
+ window.console.log(myPhone.warranty);
+ 
+ <!-- to add new property to object -->
+ myPhone.condition="like new";
+ window.console.log(myPhone);
+  window.console.log(myPhone.condition);
+  
+<!-- create another object using new constructor -->
+
+var myPhone2 = new phone("Redmi6","MI",12,"blue");
+window.console.log(myPhone2);
+window.console.log(myPhone2.condition);
+
+
+<!-- The prototype is an object that is associated with every functions and objects -->
+<!-- by default in JavaScript, where function's prototype property is accessible and -->
+<!-- modifiable and object's prototype property (aka attribute) is not visible. -->
+
+<!-- The prototype object is special type of enumerable object to which -->
+<!-- additional properties can be attached to it which will be shared across all -->
+<!-- the instances of it's constructor function.-->
+ 
+ 
+ 
+ <!-- all objects inherit properties from a prototype -->
+ <!--  to add -- name of constructor followed by prototype then name of the new property -->
+ 
+ phone.prototype.condition = "new";
+ window.console.log(myPhone2.condition);
+ 
+ 
+ 
+
+</script>
+ </body>
+ </html>
+ 
