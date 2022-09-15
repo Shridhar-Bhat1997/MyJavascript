@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+   <title> Arrays </title>
+</head>
+
+<body>
+  <p id="MyParagraph"> Javascript </p>
+  <p id="MyParagraph2"> Programming </p>
+  <p id="MyParagraph3"> CPP </p>
+  <p id="demo"> C </p>
+  <p id="demo1"> java </p>
+  <p id="demo2"> Ruby </p>
+  <p id="demo3"> Pensil </p>
+  <p id="demo4"> Pen </p>
+  <p id="demo5"> Toy </p>
+  <p id="demo6"> Rubber </p>
+  <p id="demo7"> Easy </p>
+  
+  <p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<p id="demo11"></p>
+<p id="demo12"></p>
+
+<p id="demo13"></p>
+<p id="demo14"></p>
+
+<p id="demo15"></p>
+<p id="demo16"></p>
+
+
+  
+  
+<!--   javascript ---- -->
+<script>
+<!-- creating array -->
+ var shoppingList = ["milk","teapowder","oil"];
+var shoppingList3 = ["cricket","chess","tennis"];
+
+<!-- creating array (type of object) using javascript keyword new -->
+ var shoppingList1=new Array("pensil","rubber");
+
+ document.getElementById("MyParagraph").innerHTML=shoppingList;
+ document.getElementById("MyParagraph2").innerHTML=shoppingList1;
+
+<!-- to access particular items in an array (indexing) -->
+document.getElementById("MyParagraph3").innerHTML=shoppingList3[1];
+//document.getElementById("MyParagraph3").innerHTML=shoppingList3[2];
+
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+document.getElementById("demo").innerHTML = cars;
+//document.getElementById("demo").innerHTML = cars[0]; // accessing array elements
+cars[0] = "Opel"; // changing array element
+document.getElementById("demo").innerHTML = cars;
+
+const person = {firstName:"John", lastName:"Doe", age:46};
+document.getElementById("demo1").innerHTML = person.firstName;
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = fruits.length; // returns the length
+
+const fruits2 = ["Banana", "Orange", "Apple"];
+fruits2.push("Lemon");  // Adds a new element (Lemon) to fruits2
+document.getElementById("demo3").innerHTML = fruits2;
+
+//converts an array to a string of (comma separated) array values.
+const fruits3 = ["Banana", "Orange", "Apple", "Mango","grapes"];
+document.getElementById("demo4").innerHTML = fruits3.toString();
+
+// join() method also joins all array elements into a string.
+const fruits4 = ["chikku","Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo5").innerHTML = fruits4.join(" * ");
+
+// pop() method removes the last element from an array
+const alphabets = ["a", "b", "c", "d"];
+document.getElementById("demo6").innerHTML = alphabets;
+alphabets.pop();
+document.getElementById("demo7").innerHTML = alphabets;
+
+
+//splice() method can be used to add new items to an array
+//  first parameter (2) defines the position where new elements should be added (spliced in).
+//The second parameter (2) defines how many elements should be removed.
+const fruits5 = ["Banana", "Orange", "Apple", "Mango","watermelon","jackfruit"];
+document.getElementById("demo8").innerHTML = "Original Array:<br> " + fruits5;
+let removed = fruits5.splice(2, 2, "Lemon", "Kiwi"); 
+document.getElementById("demo9").innerHTML = "New Array:<br>" + fruits5;
+document.getElementById("demo10").innerHTML = "Removed Items:<br> " + removed;
+
+// sort() method sorts an array alphabetically
+const things = ["pen", "rubber", "eraser"];
+document.getElementById("demo11").innerHTML = things;
+things.sort();
+document.getElementById("demo12").innerHTML = things;
+
+// reverse() method reverses the elements in an array.
+const subjects = ["science", "commerce", "arts","diploma"];
+document.getElementById("demo13").innerHTML = subjects;
+
+// First sort the array
+subjects.sort();
+
+// Then reverse it:
+subjects.reverse();
+
+document.getElementById("demo14").innerHTML = subjects;
+
+// Array elements can be deleted using the JavaScript operator delete.
+// Using delete leaves undefined holes in the array.
+
+const classes = ["std1", "std2", "std3", "std4"];
+document.getElementById("demo15").innerHTML = "The first fruit is: " + classes[0];
+delete classes[0];
+document.getElementById("demo16").innerHTML = "The first fruit is: " + classes[0];
+
+</script>
+</body>
+</html>
