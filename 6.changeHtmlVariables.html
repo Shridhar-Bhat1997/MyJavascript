@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Change HTML using variables </title>
+<style>
+  .bluebox{
+      background-color: #3A5795;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+   .yellowbox{
+   background-color: rgb(222,224,85);
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+    .greenbox{
+	background-color:green;
+	  color:white;
+	  height:100px;
+	  width:auto;
+	  }
+	  
+	.great{
+	   background-color:red;
+	   font-size:200%;
+	   }
+  
+</style>
+</head>
+
+<body>
+<div class="bluebox" id="facebook">
+ <p> Facebook is <span class="great"> great.<span> </p>
+</div>
+<div class="yellowbox" id="microsoft">
+ <p> Microsoft </p>
+</div>
+<div class="greenbox">
+ <p> Wipro </p>
+ </div>
+ 
+<!------Javascript----------- -->
+
+<button id="button1"> Change Facebook style </button>
+<button id="button2"> Change Microsoft style </button>
+
+<script>
+ 
+ var color="yellow";
+ document.getElementById("button1").onclick=function()
+ {
+ document.getElementById("facebook").style.backgroundColor= color;
+ }
+ 
+ <!-- random number -->
+ var a;
+ a=Math.random();   <!-- random no between 0 & 1 -->
+ window.alert(a);
+ 
+ <!-- random color generator -->
+ var x,y,z,microsoftColor;
+ document.getElementById("button2").onclick=function()
+ {
+ x=Math.round(Math.random()*256);
+ y=Math.round(Math.random()*256);
+ z=Math.round(Math.random()*256);
+ microsoftColor='rgb('+ x +','+ y + ',' + z + ')';
+ document.getElementById("microsoft").style.backgroundColor=microsoftColor;
+ document.getElementById("microsoft").innerHTML=microsoftColor;
+ }
+</script>
+</body>
+</html>
